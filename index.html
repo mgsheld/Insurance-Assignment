@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Home</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="styles.css" />
+    <script type="module" src="script.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  </head>
+  <body>
+  <h1> Insurance Calculator</h1>
+  
+  <br>
+  <br>
+  
+
+<div class="card"style="width: 24rem; margin: 0 auto;">
+  <div class="card-header" id="header">
+    <p id="intro">Your policy will cost 5 times your age plus $300 per year. Your result will be printed below. </p>
+  </div>
+  <div class="card-body" id="cardBody">
+    <label for="age">Please enter your age: </label>
+    <br>
+    <input type="text" id="age">
+    
+    <br>
+    <br>
+    
+    <label for="result">Your result will be printed here:</label>
+    <p id="result"> </p>
+    
+
+  </div>
+  <div class="card-footer text-muted" id = "buttons">
+    <button class="smalltext" id="clear" >Clear</button>
+    <button class="ios-circle" id="calculate" >Calculate</button>
+  </div>
+</div>
+
+<script type="text/javascript">
+  $(document).ready(function(){
+    $('#calculate').click(function () {
+      
+      let age = $('#age').val();
+      let result = 5 * age + 300
+      
+      $("#result").fadeOut(function() {
+     $(this).text("$" + result + " per Year").fadeIn();
+      });
+    });
+    
+      $('#clear').click(function () {
+        document.getElementById("age").value = "";
+        $('#result').fadeOut();
+        
+      });
+    });
+    
+    
+    
+    
+</script>
+  </body>
+</html>

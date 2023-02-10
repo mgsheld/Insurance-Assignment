@@ -1,0 +1,38 @@
+
+
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  color: black;
+  background-color: white;
+}
+
+#intro{
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+}
+
+h1 {
+  font-weight: bold;
+  font-size: 1.5rem;
+  text-align: center;
+  padding: 20px 20px 20px;
+}
+
+#buttons {
+  display: flex;
+  justify-content: space-between;
+  background-color: rgba(57, 182, 231, 0.6);
+}
+
+#header{
+  background-color: rgba(57, 182, 231, 0.6);
+
+}
+  #cardBody{
+    background-color: rgba(125, 133, 136, 0.2);
+  }
+
+
+
